@@ -1,2 +1,2 @@
 # rock-paper-scissors
-TOP - Rock Paper Scissors GUI
+The Odin Project - Rock Paper Scissors GUI
