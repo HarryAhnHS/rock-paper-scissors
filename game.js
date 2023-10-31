@@ -64,8 +64,110 @@ rock.addEventListener('click', () => {
     // Check for winner
     if (parseInt(playerScore.textContent) == 5) {
         alert("Congratulations! You were first to three wins!");
+        // Clear inputs
+        playerScore.textContent = '0';
+        aiScore.textContent = '0';
+        playerWeapon.textContent = '';
+        aiWeapon.textContent = '';
     }
     if (parseInt(aiScore.textContent) == 5) {
         alert("Sorry, you lose!");
+        // Clear inputs
+        playerScore.textContent = '0';
+        aiScore.textContent = '0';
+        playerWeapon.textContent = '';
+        aiWeapon.textContent = '';
+    }
+});
+
+paper.addEventListener('click', () => {
+    let p = 'paper';
+    let c = getComputerChoice();
+
+    // Update Frames
+    playerWeapon.textContent = p;
+    aiWeapon.textContent = c;
+
+    
+    // Determine outcome
+    let outcome = singleRPS(p,c);
+    if (outcome == 0) {
+        console.log(`Bummer! It's a tie between ${p}.`)
+    }
+    else if (outcome == 1) {
+        console.log(`You win: ${p} beats ${c}!`);
+        player++;        
+    }
+    else if (outcome == -1) {
+        console.log(`You lose: ${p} gets destroyed by ${c}!`)
+        ai++;
+    }
+
+    // Update Scoreboard
+    playerScore.textContent = player;
+    aiScore.textContent = ai;
+
+    // Check for winner
+    if (parseInt(playerScore.textContent) == 5) {
+        alert("Congratulations! You were first to three wins!");
+        // Clear inputs
+        playerScore.textContent = '0';
+        aiScore.textContent = '0';
+        playerWeapon.textContent = '';
+        aiWeapon.textContent = '';
+    }
+    if (parseInt(aiScore.textContent) == 5) {
+        alert("Sorry, you lose!");
+        // Clear inputs
+        playerScore.textContent = '0';
+        aiScore.textContent = '0';
+        playerWeapon.textContent = '';
+        aiWeapon.textContent = '';
+    }
+});
+
+scissors.addEventListener('click', () => {
+    let p = 'scissors';
+    let c = getComputerChoice();
+
+    // Update Frames
+    playerWeapon.textContent = p;
+    aiWeapon.textContent = c;
+
+    
+    // Determine outcome
+    let outcome = singleRPS(p,c);
+    if (outcome == 0) {
+        console.log(`Bummer! It's a tie between ${p}.`)
+    }
+    else if (outcome == 1) {
+        console.log(`You win: ${p} beats ${c}!`);
+        player++;        
+    }
+    else if (outcome == -1) {
+        console.log(`You lose: ${p} gets destroyed by ${c}!`)
+        ai++;
+    }
+
+    // Update Scoreboard
+    playerScore.textContent = player;
+    aiScore.textContent = ai;
+
+    // Check for winner
+    if (parseInt(playerScore.textContent) == 5) {
+        alert("Congratulations! You were first to three wins!");
+        // Clear inputs
+        playerScore.textContent = '0';
+        aiScore.textContent = '0';
+        playerWeapon.textContent = '';
+        aiWeapon.textContent = '';
+    }
+    if (parseInt(aiScore.textContent) == 5) {
+        alert("Sorry, you lose!");
+        // Clear inputs
+        playerScore.textContent = '0';
+        aiScore.textContent = '0';
+        playerWeapon.textContent = '';
+        aiWeapon.textContent = '';
     }
 });
