@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <div class="header-title">
+            Rock Paper Scissors
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="content-container">
+
+            <div class="content-scoreboard">
+                <div class="scoreboard">
+                    <div class="scoreboard-title">
+                        You
+                    </div>
+                    <div class="scoreboard-weapon">
+                        <div class="weapon-frame" id="player-weapon"></div>
+                    </div>
+                    <div class="scoreboard-score">
+                        <span>Score:&nbsp;</span>
+                        <span id="player-score">0</span>
+                    </div>
+                </div>
+                <div class="vs">
+                    VS.
+                </div>
+                <div class="scoreboard">
+                    <div class="scoreboard-title">
+                        &nbsp;
+                    </div>
+                    <div class="scoreboard-weapon">
+                        <div class="weapon-frame" id="ai-weapon"></div>
+                    </div>
+                    <div class="scoreboard-score">
+                        <span>Score:&nbsp;</span>
+                        <span id="ai-score">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="option-title">
+                Choose your weapon:
+            </div>
+
+            <div class="content-options">
+                
+                <button id="rock" class="option-card">
+                    Rock
+                </button>
+                <button id="paper" class="option-card">
+                    Paper
+                </button>
+                <button id="scissors" class="option-card">
+                    Scissors
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        Website by Harry Ahn
+    </div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+body {
+    font-family:-apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    background-color: #ddb892;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.header-title {
+    padding: 20px;
+    margin-top: 30px;
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+
+}
+
+/* Content */
+
+.content {
+    background-color: #e6ccb2;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-container {
+    /* border: 1px solid black; */
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+/* Scoreboard */
+
+.content-scoreboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 16px;
+}
+
+.scoreboard {
+    width: 300px;
+    height: 350px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+}
+
+.scoreboard-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.scoreboard-weapon {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weapon-frame {
+    background-color: white;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scoreboard-score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+/* Weapon Options */
+
+.option-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 300;
+    margin: 12px 6px 6px 6px;
+}
+
+.content-options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.option-card {
+    margin: 16px;
+    height: 150px;
+    width: 200px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
+
+
+.footer {
+    background-color: #ede0d4;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
