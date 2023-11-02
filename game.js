@@ -81,11 +81,14 @@ weapons.forEach( (e) => {
 
         //Play Again BTN
         playAgain.addEventListener('click', () => {
-        // Clear inputs
+        
+            // Clear inputs
         playerScore.textContent = '0';
         aiScore.textContent = '0';
         playerWeapon.textContent = '';
         aiWeapon.textContent = '';
+        player = 0;
+        ai = 0;
 
         modal.style.display = 'none';
         modalWinner.textContent = '';
