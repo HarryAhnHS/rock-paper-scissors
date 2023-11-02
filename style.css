@@ -125,6 +125,55 @@ body {
 }
 
 
+/* Modal Styling  */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgb(0,0,0, 0.4);
+}
+
+.modal-content {
+    background-color: white;
+    width: 70%;
+    margin: 15% auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-text {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#play-again {
+    width: 200px;
+    height: 60px;
+    border: 0px;
+    border-radius: 4px;
+    background-color: #ddb892;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#modal-winner {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 80px;
+}
+
 
 
 .footer {
@@ -134,4 +183,3 @@ body {
     justify-content: center;
     align-items: center;
 }
-
