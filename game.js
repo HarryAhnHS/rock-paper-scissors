@@ -21,6 +21,29 @@ function singleRPS(player, computer) {
     else if (outcome[p]["losesTo"] == c) return -1;
 }
 
+// Helper function to create and append div{img} element based on weapon to outerDiv
+function createWeaponImg(weapon, outerDiv) {
+    const div = document.createElement('div');
+    const img = document.createElement('img');
+
+    // Create weapon src address
+    let srcAddress = `./imgs/${weapon}.png`;
+    div.classList.add('weapons-png');
+    img.setAttribute('src', srcAddress);
+    img.setAttribute('alt', weapon);
+
+    div.appendChild(img);
+
+    outerDiv.appendChild(div);
+}
+
+// Function to clear div contents
+function clearDiv(div) {
+    while (div.firstChild) {
+        div.removeChild(div.firstChild);
+    }
+}
+
 let player = 0;
 let ai = 0;
 
@@ -46,9 +69,16 @@ weapons.forEach( (e) => {
         let p = e.getAttribute('id').toString();
         let c = getComputerChoice();
 
+        // Clear divs first, then
+        // Create and append appropriate imgs and update frames
+        clearDiv(playerWeapon);
+        clearDiv(aiWeapon);
+        createWeaponImg(p,playerWeapon);
+        createWeaponImg(c,aiWeapon);
+
         // Update Frames
-        playerWeapon.textContent = p;
-        aiWeapon.textContent = c;
+        // playerWeapon.appendChild() = p;
+        // aiWeapon.textContent = c;
 
         // Determine outcome
         let outcome = singleRPS(p,c);
@@ -70,13 +100,13 @@ weapons.forEach( (e) => {
 
         // Check for winner
         if (parseInt(playerScore.textContent) == 5) {
-        modal.style.display = 'block';
-        modalWinner.textContent = 'Congratulations! You were first to five wins!'
+            modal.style.display = 'block';
+            modalWinner.textContent = 'Congratulations! You were first to five wins!'
 
         }
         if (parseInt(aiScore.textContent) == 5) {
-        modal.style.display = 'block';
-        modalWinner.textContent = 'Sorry! You lost five times.';
+            modal.style.display = 'block';
+            modalWinner.textContent = 'Sorry! You lost five times.';
         }
 
         //Play Again BTN
@@ -85,8 +115,6 @@ weapons.forEach( (e) => {
             // Clear inputs
         playerScore.textContent = '0';
         aiScore.textContent = '0';
-        playerWeapon.textContent = '';
-        aiWeapon.textContent = '';
         player = 0;
         ai = 0;
 
@@ -95,61 +123,3 @@ weapons.forEach( (e) => {
         });
     });
 });
-
-// rock.addEventListener('click', () => {
-//     let p = 'rock';
-//     let c = getComputerChoice();
-
-//     // Update Frames
-//     playerWeapon.textContent = p;
-//     aiWeapon.textContent = c;
-
-    
-//     // Determine outcome
-//     let outcome = singleRPS(p,c);
-//     if (outcome == 0) {
-//         console.log(`Bummer! It's a tie between ${p}.`)
-//     }
-//     else if (outcome == 1) {
-//         console.log(`You win: ${p} beats ${c}!`);
-//         player++;        
-//     }
-//     else if (outcome == -1) {
-//         console.log(`You lose: ${p} gets destroyed by ${c}!`)
-//         ai++;
-//     }
-
-//     // Update Scoreboard
-//     playerScore.textContent = player;
-//     aiScore.textContent = ai;
-
-//     // Check for winner
-//     if (parseInt(playerScore.textContent) == 5) {
-//         // Clear inputs
-//         playerScore.textContent = '0';
-//         aiScore.textContent = '0';
-//         playerWeapon.textContent = '';
-//         aiWeapon.textContent = '';
-
-//         modal.style.display = 'block';
-//         modalWinner.textContent = 'Congratulations! You were first to five wins!'
-
-//     }
-//     if (parseInt(aiScore.textContent) == 5) {
-//         alert("Sorry, you lose!");
-
-//         modal.style.display = 'block';
-//         modalWinner.textContent = 'Sorry! You lost five times.';
-//     }
-
-//     playAgain.addEventListener('click', () => {
-//         // Clear inputs
-//         playerScore.textContent = '0';
-//         aiScore.textContent = '0';
-//         playerWeapon.textContent = '';
-//         aiWeapon.textContent = '';
-
-//         modal.style.display = 'none';
-//         modalWinner.textContent = '';
-//     });
-// });

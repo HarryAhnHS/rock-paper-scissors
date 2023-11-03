@@ -6,6 +6,11 @@
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
     <script src="game.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,200&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div class="header">
@@ -23,7 +28,9 @@
                         You
                     </div>
                     <div class="scoreboard-weapon">
-                        <div class="weapon-frame" id="player-weapon"></div>
+                        <div class="weapon-frame" id="player-weapon">
+
+                        </div>
                     </div>
                     <div class="scoreboard-score">
                         <span>Score:&nbsp;</span>
@@ -38,7 +45,9 @@
                         &nbsp;
                     </div>
                     <div class="scoreboard-weapon">
-                        <div class="weapon-frame" id="ai-weapon"></div>
+                        <div class="weapon-frame" id="ai-weapon">
+
+                        </div>
                     </div>
                     <div class="scoreboard-score">
                         <span>Score:&nbsp;</span>
@@ -48,19 +57,24 @@
             </div>
 
             <div class="option-title">
-                Choose your weapon:
+                Choose your weapon
             </div>
 
             <div class="content-options">
-                
                 <button id="rock" class="option-card">
-                    Rock
+                    <div class="weapons-png" id="rock-png">
+                        <img src="./imgs/rock.png" alt="Rock">
+                    </div>
                 </button>
                 <button id="paper" class="option-card">
-                    Paper
+                    <div class="weapons-png" id="paper-png">
+                        <img src="./imgs/paper.png" alt="Paper">
+                    </div>
                 </button>
                 <button id="scissors" class="option-card">
-                    Scissors
+                    <div class="weapons-png" id="scissors-png">
+                        <img src="./imgs/scissors.png" alt="Scissors">
+                    </div>
                 </button>
             </div>
         </div>
@@ -76,7 +90,7 @@
     </div>
 
     <div class="footer">
-        Website by Harry Ahn
+        Copyright by Harry Ahn
     </div>
 </body>
 </html>
