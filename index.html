@@ -4,8 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,200&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <script src="game.js"></script>
+    <div class="header">
+        <div class="header-title">
+            Rock Paper Scissors
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="content-container">
+
+            <div class="content-scoreboard">
+                <div class="scoreboard">
+                    <div class="scoreboard-title">
+                        You
+                    </div>
+                    <div class="scoreboard-weapon">
+                        <div class="weapon-frame" id="player-weapon">
+
+                        </div>
+                    </div>
+                    <div class="scoreboard-score">
+                        <span>Score:&nbsp;</span>
+                        <span id="player-score">0</span>
+                    </div>
+                </div>
+                <div class="vs">
+                    VS.
+                </div>
+                <div class="scoreboard">
+                    <div class="scoreboard-title">
+                        &nbsp;
+                    </div>
+                    <div class="scoreboard-weapon">
+                        <div class="weapon-frame" id="ai-weapon">
+
+                        </div>
+                    </div>
+                    <div class="scoreboard-score">
+                        <span>Score:&nbsp;</span>
+                        <span id="ai-score">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="option-title">
+                Choose your weapon
+            </div>
+
+            <div class="content-options">
+                <button id="rock" class="option-card">
+                    <div class="weapons-png" id="rock-png">
+                        <img src="./imgs/rock.png" alt="Rock">
+                    </div>
+                </button>
+                <button id="paper" class="option-card">
+                    <div class="weapons-png" id="paper-png">
+                        <img src="./imgs/paper.png" alt="Paper">
+                    </div>
+                </button>
+                <button id="scissors" class="option-card">
+                    <div class="weapons-png" id="scissors-png">
+                        <img src="./imgs/scissors.png" alt="Scissors">
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal-content">
+            <div class="modal-text">
+                <span id="modal-winner">You win!</span>
+                <button id="play-again">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; Copyright by @HarryAhnHS 
+        <a href="https://github.com/HarryAhnHS" class="github-a" target="_blank">
+            <div class="github-logo">
+                <img src="./imgs/github.png" alt="github">
+            </div>
+        </a>
+    </div>
 </body>
 </html>
