@@ -33,7 +33,6 @@ body {
 }
 
 .content-container {
-    /* border: 1px solid black; */
     width: 60%;
     display: flex;
     flex-direction: column;
@@ -54,7 +53,6 @@ body {
 .scoreboard {
     width: 300px;
     height: 350px;
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     padding: 12px;
@@ -140,7 +138,6 @@ img {
 }
 
 /* Button hover, click */
-
 .option-card {
     transition: all 500ms ease;
     border: 0;
@@ -220,4 +217,21 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.github-logo {
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.github-a {
+    opacity: 0.5;
+}
+
+.github-a:hover {
+    opacity: 1;
 }

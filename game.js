@@ -21,7 +21,7 @@ function singleRPS(player, computer) {
     else if (outcome[p]["losesTo"] == c) return -1;
 }
 
-// Helper function to create and append div{img} element based on weapon to outerDiv
+// Helper function to create and append div{img} element based on 'weapon' to outerDiv
 function createWeaponImg(weapon, outerDiv) {
     const div = document.createElement('div');
     const img = document.createElement('img');
@@ -106,16 +106,15 @@ weapons.forEach( (e) => {
         }
 
         //Play Again BTN
-        playAgain.addEventListener('click', () => {
-        
+        playAgain.addEventListener('click', () => {            
             // Clear inputs
-        playerScore.textContent = '0';
-        aiScore.textContent = '0';
-        player = 0;
-        ai = 0;
+            playerScore.textContent = '0';
+            aiScore.textContent = '0';
+            player = 0;
+            ai = 0;
 
-        modal.style.display = 'none';
-        modalWinner.textContent = '';
+            modal.style.display = 'none';
+            modalWinner.textContent = '';
         });
     });
 });
