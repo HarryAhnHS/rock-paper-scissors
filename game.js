@@ -63,6 +63,8 @@ const modal = document.querySelector('.modal');
 const modalWinner = document.querySelector('#modal-winner');
 const playAgain = document.querySelector('#play-again');
 
+const feedback = document.querySelector('.content-feedback');
+
 weapons.forEach( (e) => {
     e.addEventListener ('click', () => {
         console.log(e.getAttribute('id'));
@@ -76,18 +78,20 @@ weapons.forEach( (e) => {
         createWeaponImg(p,playerWeapon);
         createWeaponImg(c,aiWeapon);
 
+
+
         // Determine outcome
         let outcome = singleRPS(p,c);
         if (outcome == 0) {
-        console.log(`Bummer! It's a tie between ${p}.`)
+            feedback.textContent = `Bummer - It's a tie.`;
         }
         else if (outcome == 1) {
-        console.log(`You win: ${p} beats ${c}!`);
-        player++;        
+            feedback.textContent = `You win - ${p} beats ${c}!`;
+            player++;
         }
         else if (outcome == -1) {
-        console.log(`You lose: ${p} gets destroyed by ${c}!`)
-        ai++;
+            feedback.textContent = `You lose - ${p} loses to ${c}!`;
+            ai++;
         }
 
         // Update Scoreboard
@@ -97,8 +101,7 @@ weapons.forEach( (e) => {
         // Check for winner
         if (parseInt(playerScore.textContent) == 5) {
             modal.style.display = 'block';
-            modalWinner.textContent = 'Congratulations! You were first to five wins!'
-
+            modalWinner.textContent = 'Congratulations! You were first to five wins!';
         }
         if (parseInt(aiScore.textContent) == 5) {
             modal.style.display = 'block';
@@ -108,6 +111,7 @@ weapons.forEach( (e) => {
         //Play Again BTN
         playAgain.addEventListener('click', () => {            
             // Clear inputs
+            feedback.textContent = 'First to five wins!'
             playerScore.textContent = '0';
             aiScore.textContent = '0';
             player = 0;
