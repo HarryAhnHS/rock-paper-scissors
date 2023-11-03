@@ -117,6 +117,9 @@ weapons.forEach( (e) => {
             player = 0;
             ai = 0;
 
+            clearDiv(playerWeapon);
+            clearDiv(aiWeapon);
+
             modal.style.display = 'none';
             modalWinner.textContent = '';
         });
