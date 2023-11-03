@@ -76,10 +76,6 @@ weapons.forEach( (e) => {
         createWeaponImg(p,playerWeapon);
         createWeaponImg(c,aiWeapon);
 
-        // Update Frames
-        // playerWeapon.appendChild() = p;
-        // aiWeapon.textContent = c;
-
         // Determine outcome
         let outcome = singleRPS(p,c);
         if (outcome == 0) {
