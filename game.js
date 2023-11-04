@@ -107,12 +107,17 @@ weapons.forEach( (e) => {
 
         // Check for winner
         if (parseInt(playerScore.textContent) == 5) {
-            modal.style.display = 'block';
-            modalWinner.textContent = 'Congratulations! You were first to five wins!';
+            setTimeout(function() {
+                modal.style.display = 'block';
+                modalWinner.textContent = 'Congratulations! You were first to five wins!';
+            }, 500);
+
         }
         if (parseInt(aiScore.textContent) == 5) {
-            modal.style.display = 'block';
-            modalWinner.textContent = 'Sorry! You lost five times.';
+            setTimeout(function() {
+                modal.style.display = 'block';
+                modalWinner.textContent = 'Sorry! You lost five times.';
+            }, 500);
         }
 
         //Play Again BTN
