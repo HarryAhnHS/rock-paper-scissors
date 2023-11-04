@@ -85,13 +85,19 @@ weapons.forEach( (e) => {
         let outcome = singleRPS(p,c);
         if (outcome == 0) {
             feedback.textContent = `Bummer - It's a tie.`;
+            playerWeapon.style['background-color'] = '#faf3dd';
+            aiWeapon.style['background-color'] = '#faf3dd';
         }
         else if (outcome == 1) {
             feedback.textContent = `You win - ${p} beats ${c}!`;
+            playerWeapon.style['background-color'] = '#b8f2e6';
+            aiWeapon.style['background-color'] = '#ffa69e';
             player++;
         }
         else if (outcome == -1) {
             feedback.textContent = `You lose - ${p} loses to ${c}!`;
+            playerWeapon.style['background-color'] = '#ffa69e';
+            aiWeapon.style['background-color'] = '#b8f2e6';
             ai++;
         }
 
@@ -120,6 +126,9 @@ weapons.forEach( (e) => {
 
             clearDiv(playerWeapon);
             clearDiv(aiWeapon);
+
+            playerWeapon.style['background-color'] = 'white';
+            aiWeapon.style['background-color'] = 'white';
 
             modal.style.display = 'none';
             modalWinner.textContent = '';
