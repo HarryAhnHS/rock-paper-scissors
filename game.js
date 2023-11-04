@@ -29,6 +29,7 @@ function createWeaponImg(weapon, outerDiv) {
     // Create weapon src address
     let srcAddress = `./imgs/${weapon}.png`;
     div.classList.add('weapons-png');
+    div.classList.add('weapon-frame-png');
     img.setAttribute('src', srcAddress);
     img.setAttribute('alt', weapon);
 

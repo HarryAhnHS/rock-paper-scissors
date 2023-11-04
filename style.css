@@ -8,7 +8,7 @@ body {
 
 /* Header */
 .header {
-    background-color: #ced4da;
+    background-color: #4a4e69;
     display: flex; 
     justify-content: center;
     align-items: center;
@@ -17,7 +17,7 @@ body {
 .header-title {
     padding: 20px;
     margin-top: 20px;
-    color: black;
+    color: white;
     font-size: 40px;
     font-weight: 600;
 }
@@ -56,7 +56,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 25px;
-    padding: 16px;
+    padding: 25px;
 }
 
 .scoreboard {
@@ -86,12 +86,24 @@ body {
 
 .weapon-frame {
     background-color: white;
-    width: 260px;
-    height: 260px;
+    width: 240px;
+    height: 240px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* transition into weaponframe */
+.weapon-frame-png {
+    animation: move 0.5s ease forwards;
+}
+
+@keyframes move {
+    to {
+        transform: scale(1.1);
+    }
+    
 }
 
 .scoreboard-score {
@@ -148,24 +160,34 @@ img {
 
 /* Button hover, click */
 .option-card {
-    transition: all 500ms ease;
     border: 0;
 }
 
 .option-card:hover {
+    /* border: 1px solid black; */
+    background-color: #4a4e69;
+}
+
+.option-card:hover .weapons-png{
+    transition: all 0.8s;
+    transform: rotateY(360deg);
+}
+
+/* .option-card:hover {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
-}
+} */
 
 #play-again {
-    transition: all 500ms ease;
+    transition: all 250ms ease;
     border: 0;
-    opacity: 0.5;
 }
 
 #play-again:hover {
-    opacity: 1;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
 }
 
 
